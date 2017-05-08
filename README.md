@@ -15,3 +15,6 @@ v-bind：将这条指令绑定的元素节点的title属性和 Vue 实例的 mes
 
 <table><tbody><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> app2 = <span class="keyword">new</span> Vue({</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app-2'</span>,</div><div class="line">  <span class="attr">data</span>: {</div><div class="line">    <span class="attr">message</span>: <span class="string">'页面加载于 '</span> + <span class="keyword">new</span> <span class="built_in">Date</span>()</div><div class="line">  }</div><div class="line">})</div></pre></td></tr></tbody></table>
 
+v-if：条件 ，v-if=“true/false”
+
+v-for：循环 ，v-for=“todo in todos” ，todos是list， .todos.push({ text:'XXX'})给list里添加一个新项。
