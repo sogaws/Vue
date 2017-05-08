@@ -7,7 +7,7 @@ GitHub：https://github.com/vuejs/vue/releases
 
 vue 是一套构建用户界面的渐进式框架，它采用自底向上增量开发设计，它的核心库只关注视图层。
 
-指令带有前缀 v-，以表示它们是 Vue 提供的特殊属性。
+一、指令带有前缀 v-，以表示它们是 Vue 提供的特殊属性。
 
 v-bind：将这条指令绑定的元素节点的title属性和 Vue 实例的 message 属性保持一致，如下：
 
@@ -26,3 +26,5 @@ v-on：可以用来绑定一个事件监听器，如下：
 <table><tbody><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> app5 = <span class="keyword">new</span> Vue({</div><div class="line">  <span class="attr">el</span>: <span class="string">'#app-5'</span>,</div><div class="line">  <span class="attr">data</span>: {</div><div class="line">    <span class="attr">message</span>: <span class="string">'Hello Vue.js!'</span></div><div class="line">  },</div><div class="line">  <span class="attr">methods</span>: {</div><div class="line">    <span class="attr">reverseMessage</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">      <span class="keyword">this</span>.message = <span class="keyword">this</span>.message.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>)</div><div class="line">    }</div><div class="line">  }</div><div class="line">})</div></pre></td></tr></tbody></table>
 
 v-model：实现表单输入和应用状态之间的双向绑定。
+
+二、组建系统是Vue的一个重要的概念，因为它是一种抽象，允许我们使用小型、自包含和通常可复用的组件构建大型应用。几乎任意类型的应用界面都可以抽象为一个组件树。
