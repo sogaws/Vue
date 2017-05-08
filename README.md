@@ -33,11 +33,15 @@ v-model：实现表单输入和应用状态之间的双向绑定。
 
 <table><tbody><tr><td class="code"><pre><div class="line"><span class="comment">// 定义名为 todo-item 的新组件</span></div><div class="line">Vue.component(<span class="string">'todo-item'</span>, {</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;li&gt;这是个待办项&lt;/li&gt;'</span></div><div class="line">})</div></pre></td></tr></tbody></table>
 
+如果想要将数据从父作用域传到子组件，需要修改一下组件定义，使之能够接受一个属性
+
+<table><tbody><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'todo-item'</span>, {</div><div class="line">  <span class="comment">// todo-item 组件现在接受一个</span></div><div class="line">  <span class="comment">// "prop"，类似于一个自定义属性</span></div><div class="line">  <span class="comment">// 这个属性名为 todo。</span></div><div class="line">  props: [<span class="string">'todo'</span>],</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;li&gt;{{ todo.text }}&lt;/li&gt;'</span></div><div class="line">})</div></pre></td></tr></tbody></table>
+
 使用方式：
 
 <table><tbody><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 创建一个 todo-item 组件的实例 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">todo-item</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div></pre></td></tr></tbody></table>
 
 
-<table><tbody><tr><td class="code"><pre><div class="line">Vue.component(<span class="string">'todo-item'</span>, {</div><div class="line">  <span class="comment">// todo-item 组件现在接受一个</span></div><div class="line">  <span class="comment">// "prop"，类似于一个自定义属性</span></div><div class="line">  <span class="comment">// 这个属性名为 todo。</span></div><div class="line">  props: [<span class="string">'todo'</span>],</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;li&gt;{{ todo.text }}&lt;/li&gt;'</span></div><div class="line">})</div></pre></td></tr></tbody></table>
+
 
 <table><tbody><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app-7"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 现在我们为每个todo-item提供待办项对象    --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 待办项对象是变量，即其内容可以是动态的 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">todo-item</span> <span class="attr">v-for</span>=<span class="string">"item in groceryList"</span> <span class="attr">v-bind:todo</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-item</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></tbody></table>
