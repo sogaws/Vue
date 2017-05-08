@@ -11,11 +11,11 @@ vue 是一套构建用户界面的渐进式框架，它采用自底向上增量�
 
 v-bind：将这条指令绑定的元素节点的title属性和 Vue 实例的 message 属性保持一致
 
-<div id="app-2">
-  <span v-bind:title="message">
+"<div id="app-2">"
+  "<span v-bind:title="message">"
     鼠标悬停几秒钟查看此处动态绑定的提示信息！
-  </span>
-</div>
+  "</span>"
+"</div>"
 
 var app2 = new Vue({
   el: '#app-2',
