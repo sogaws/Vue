@@ -28,3 +28,11 @@ v-on：可以用来绑定一个事件监听器，如下：
 v-model：实现表单输入和应用状态之间的双向绑定。
 
 二、组建系统是Vue的一个重要的概念，因为它是一种抽象，允许我们使用小型、自包含和通常可复用的组件构建大型应用。几乎任意类型的应用界面都可以抽象为一个组件树。
+
+在Vue里，一个组件本质上是一个拥有预定义选项的一个Vue实例，在Vue中注册组件方式如下：
+
+<table><tbody><tr><td class="code"><pre><div class="line"><span class="comment">// 定义名为 todo-item 的新组件</span></div><div class="line">Vue.component(<span class="string">'todo-item'</span>, {</div><div class="line">  <span class="attr">template</span>: <span class="string">'&lt;li&gt;这是个待办项&lt;/li&gt;'</span></div><div class="line">})</div></pre></td></tr></tbody></table>
+
+使用方式：
+
+<table><tbody><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 创建一个 todo-item 组件的实例 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">todo-item</span>&gt;</span><span class="tag">&lt;/<span class="name">todo-item</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div></pre></td></tr></tbody></table>
